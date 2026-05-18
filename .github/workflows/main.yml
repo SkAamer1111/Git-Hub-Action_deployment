@@ -30,6 +30,6 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
       - name: build docker images from compose
-        run: docker-compose build -f three-tier-userinfo-project/three-tier-app/docker-compose.yml --no-cache
+        run: sudo docker-compose build -f three-tier-userinfo-project/three-tier-app/docker-compose.yml --no-cache
       - name: run docker container from compose
-        run:  docker-compose -f three-tier-userinfo-project/three-tier-app/docker-compose.yml up -d
+        run:  sudo docker-compose -f three-tier-userinfo-project/three-tier-app/docker-compose.yml up -d
